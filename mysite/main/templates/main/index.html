@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% block body %}
+    <div>
+        {% for i in phone_list %}
+            {% if i.check_1 %}
+                <h4>{{ i.name }} - Առկա է</h4>
+                <a href="{% url 'index_detail' i.id %}"><img src="{{ i.img.url }}" width="400px" alt=""></a>
+                <!-- <p>{{ i.price }} դրամ</p> -->
+                <hr>
+            {% else %}
+                <h4>{{ i.name }} - Առկա չէ</h4>
+                <a href="{% url 'index_detail' i.id %}"><img src="{{ i.img.url }}" width="400px" alt=""></a>
+                <!-- <p>{{ i.price }} դրամ</p> -->
+                <hr>
+                {% endif %}
+        {% endfor %}
+    </div>
+
+{% endblock %}
