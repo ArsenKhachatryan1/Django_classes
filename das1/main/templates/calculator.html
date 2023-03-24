@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<header>
+    <h1>Calculator</h1>
+    <hr>
+</header>
+<body>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="list1" id="" placeholder="list1">
+            <input type="text" name="char" id="" placeholder="char">
+            <input type="text" name="list2" id="" placeholder="list2">
+            <button type="submit">Calculate</button>
+            
+        </form>
+    </div>
+    <div>
+        <h4>Result = {{ list3 }}</h4>
+    </div>
+</body>
+</html>
